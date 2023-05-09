@@ -1,0 +1,16 @@
+*NLTK (Natural Language Toolkit)
+*By default, NLTK (Natural Language Toolkit) includes a list of 40 stop words, including: “a”, “an”, “the”, “of”, “in”, etc
+*cuda enable to use gpu resources
+
+*Lemmatization is the process of converting a word to its base form. The difference between stemming and lemmatization is,
+lemmatization considers the context and converts the word to its meaningful base form,
+whereas stemming just removes the last few characters, often leading to incorrect meanings and spelling errors.
+RegexpTokenizer(r'\w+')  lower case the word
+
+*padding='max_length', In this example it is not very evident that the 3rd example will be padded, as the length exceeds 5 after appending [CLS] and [SEP] tokens.
+ However, if you have a max_length of 10. The tokenized text corresponds to [101, 2026, 2171, 2003, 11754, 102, 0, 0, 0, 0],
+ where 101 is id of [CLS] and 102 is id of [SEP] tokens.
+ Thus, padded by zeros to make all the text to the length of max_length
+ 
+ *Likewise, truncate=True will ensure that the max_length is strictly adhered, i.e, longer sentences are truncated to max_length only if truncate=True
+
